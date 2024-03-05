@@ -4,27 +4,32 @@ const Text = (props) => {
   const handleUpperCaseText = ()=>{
     let upperCaseText = withoutuptext.toUpperCase();
     withuptext(upperCaseText);
+    props.showalert("Converted To UpperCase", "success");
   }
 
   const handleLowerCaseText = ()=>{
     let lowerCaseText = withoutuptext.toLowerCase();
     withuptext(lowerCaseText);
+    props.showalert("Converted To LowerCase", "success");
   }
 
   const handleClearText = ()=>{
     let text = "" ;
-    withuptext(text)
+    withuptext(text);
+    props.showalert("Clear Text", "success");
   }
 
   const handleCopyText = ()=>{
     let text = document.getElementById("myTextBox")
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showalert("Copy Text", "success");
   }
 
   const handleExtraSpace = ()=>{
     let newtext = withoutuptext.split(/[ ]+/);
     withuptext(newtext.join(" "));
+    props.showalert("Extra Spaces Removed", "success");
   } 
 
   const handleOnChange = (e)=>{
