@@ -19,7 +19,7 @@ const Navbar = (props) => {
       </ul>
       <div className="form-check form-switch">
     <input className="form-check-input" style={{backgroundColor: props.darkMode==='light'?"white":"#198754" }} type="checkbox" onClick={props.toggleToChangeMode} role="switch" id="flexSwitchCheckDefault"/>
-    <label className={`form-check-label text-${props.darkMode==='light'?"dark":"light"}`} for="flexSwitchCheckDefault">Enable Dark Mode</label>
+    <label className={`form-check-label text-${props.darkMode==='light'?"dark":"light"}`} htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
   </div>
     </div>
   </div>

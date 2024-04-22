@@ -4,6 +4,12 @@ import Navbar from './components/Navbar';
 import Text from './components/Text';
 import { useState } from 'react';
 import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState("light");
